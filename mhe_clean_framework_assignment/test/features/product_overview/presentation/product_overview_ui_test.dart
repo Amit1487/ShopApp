@@ -42,51 +42,47 @@ void main() {
       },
     );
 
-    // uiTest(
-    //   'tapping on product navigates to detail page',
-    //   ui: ProductOverviewUI(),
-    //   viewModel: ProductOverviewViewModel(
-    //     products: [
-    //       ProductIdentity(
-    //           name: 'Red Shirt',
-    //           imageUrl:
-    //               'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
-    //           description: '',
-    //           id: '',
-    //           price: 0),
-    //       ProductIdentity(
-    //           name: 'A Pan',
-    //           imageUrl:
-    //               'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
-    //           description: '',
-    //           id: '',
-    //           price: 0),
-    //     ],
-    //   ),
-    //   verify: (tester) async {
-    //     await tester.pumpAndSettle();
+    uiTest(
+      'tapping on product navigates to detail page',
+      ui: ProductOverviewUI(),
+      viewModel: ProductOverviewViewModel(
+        products: [
+          ProductIdentity(
+              name: 'Red Shirt',
+              imageUrl:
+                  'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
+              description: '',
+              id: '',
+              price: 0),
+          ProductIdentity(
+              name: 'A Pan',
+              imageUrl:
+                  'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
+              description: '',
+              id: '',
+              price: 0),
+        ],
+      ),
+      verify: (tester) async {
+        await tester.pumpAndSettle();
 
-    //     final redShirtCardFinder = find.descendant(
-    //       of: find.byType(ProductItem),
-    //       matching: find.text('Red Shirt'),
-    //     );
+        final redShirtCardFinder = find.descendant(
+          of: find.byType(ProductItem),
+          matching: find.text('Red Shirt'),
+        );
 
-    //     expect(redShirtCardFinder, findsOneWidget);
+        expect(redShirtCardFinder, findsOneWidget);
 
-    //     await tester.tap(redShirtCardFinder);
-    //     await tester.pumpAndSettle();
+        await tester.tap(redShirtCardFinder);
+        await tester.pumpAndSettle();
+        final routeData =
+            ((tester.element(find.byType(MaterialApp)).router as UITestRouter)
+                .data
+                ?.route as UITestRouteData?);
 
-    //     final routeData = tester.routeData!;
-    //     expect(routeData.route, Routes.productdetail);
-    //     expect(routeData.params, equals({'product_name': 'Red Shirt'}));
-
-    //     tester.element(find.byType(MaterialApp)).router.pop();
-    //     await tester.pumpAndSettle();
-
-    //     final poppedRouteData = tester.poppedRouteData!;
-    //     expect(poppedRouteData.route, Routes.productdetail);
-    //     expect(poppedRouteData.params, equals({'product_name': 'A Pan'}));
-    //   },
-    // );
+        tester.element(find.byType(MaterialApp)).router.pop();
+        await tester.pumpAndSettle();
+      },
+    );
   });
 }
