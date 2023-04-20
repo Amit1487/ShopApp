@@ -13,8 +13,8 @@ final productOverviewUseCaseProvider = UseCaseProvider.autoDispose(
     bridge.connect(
       productDetailUseCaseProvider,
       selector: (e) => e.name,
-      (oldPokeName, pokeName) {
-        if (oldPokeName != pokeName) {}
+      (oldProductName, productName) {
+        if (oldProductName != productName) {}
       },
     );
   },
