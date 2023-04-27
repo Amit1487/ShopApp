@@ -14,7 +14,7 @@ final productOverviewUseCaseProvider = UseCaseProvider.autoDispose(
       productDetailUseCaseProvider,
       selector: (e) => e.name,
       (oldProductName, productName) {
-        if (oldProductName != productName) {}
+        // if (oldProductName != productName) {}
       },
     );
   },

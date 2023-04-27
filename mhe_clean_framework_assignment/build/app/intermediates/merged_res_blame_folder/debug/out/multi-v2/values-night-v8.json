@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\amit.dubey\\Documents\\Playground\\mhe_clean_framework_assignment\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\Users\\amit.dubey\\Documents\\shopApp\\ShopApp\\mhe_clean_framework_assignment\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\amit.dubey\\Documents\\Playground\\mhe_clean_framework_assignment\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "C:\\Users\\amit.dubey\\Documents\\shopApp\\ShopApp\\mhe_clean_framework_assignment\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
