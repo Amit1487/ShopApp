@@ -16,19 +16,19 @@ class ProductDetailModel {
   final String name;
 }
 
-class ProductStatModel {
-  ProductStatModel({
-    required this.name,
-  });
+// class ProductStatModel {
+//   ProductStatModel({
+//     required this.name,
+//   });
 
-  factory ProductStatModel.fromJson(Map<String, dynamic> json) {
-    final deserializer = Deserializer(json);
-    final stat = deserializer('stat');
+//   factory ProductStatModel.fromJson(Map<String, dynamic> json) {
+//     final deserializer = Deserializer(json);
+//     final stat = deserializer('stat');
 
-    return ProductStatModel(
-      name: stat.getString('name'),
-    );
-  }
+//     return ProductStatModel(
+//       name: stat.getString('name'),
+//     );
+//   }
 
-  final String name;
-}
+//   final String name;
+// }

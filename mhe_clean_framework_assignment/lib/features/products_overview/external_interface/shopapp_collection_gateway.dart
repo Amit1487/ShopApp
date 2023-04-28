@@ -76,23 +76,23 @@ class ProductIdentity {
   double price;
   String imageUrl;
 
-  factory ProductIdentity.fromJson(Map<String, dynamic> json) {
-    final deserializer = Deserializer(json);
+  // factory ProductIdentity.fromJson(Map<String, dynamic> json) {
+  //   final deserializer = Deserializer(json);
 
-    return ProductIdentity(
-      name: deserializer.getString('name'),
-      id: '0',
-      description: deserializer.getString('description'),
-      price: 0.0,
-      imageUrl: deserializer.getString('imageUrl'),
-    );
-  }
+  //   return ProductIdentity(
+  //     name: deserializer.getString('name'),
+  //     id: '0',
+  //     description: deserializer.getString('description'),
+  //     price: 0.0,
+  //     imageUrl: deserializer.getString('imageUrl'),
+  //   );
+  // }
 }
 
 class ProductCollectionRequest extends GetProductRequest {
   @override
   String get resource => 'shopping_item';
 
-  @override
-  Map<String, dynamic> get queryParams => {'limit': 100};
+  // @override
+  // Map<String, dynamic> get queryParams => {'limit': 100};
 }

@@ -3,7 +3,7 @@ import 'package:mhe_clean_assignment/core/shopapp/shopapp_request.dart';
 import 'package:mhe_clean_assignment/core/shopapp/shopapp_success_response.dart';
 
 class ProductExternalInterface
-    extends ExternalInterface<ProductRequest, ProductSuccessResponse> {
+    extends ExternalInterface<GetProductRequest, ProductSuccessResponse> {
   @override
   void handleRequest() {
     //create url provider in case want to get data from backend. and provide the url to create client to make server request.

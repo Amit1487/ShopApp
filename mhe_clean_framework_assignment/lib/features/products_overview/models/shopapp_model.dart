@@ -1,11 +1,11 @@
-class ProductModel {
-  ProductModel({
-    required this.name,
-    required this.imageUrl,
-  });
+// class ProductModel {
+//   ProductModel({
+//     required this.name,
+//     required this.imageUrl,
+//   });
 
-  final String name;
-  final String imageUrl;
+//   final String name;
+//   final String imageUrl;
 
  
-}
+// }
